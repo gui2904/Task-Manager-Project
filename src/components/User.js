@@ -1,10 +1,17 @@
 import React from 'react'
+import logo from '../images/logo.png'
 
-function User({ children }) {
+function User() {
 
   return (
     <div className='User'>
-      User
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className='info'>
+        <p>UserName</p>
+        <a href="#">Logout</a>
+      </div>
     </div>
   );
 }
