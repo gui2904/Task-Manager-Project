@@ -3,7 +3,7 @@ import Todo from './Todo.js'
 import Next7Days from './Next7Days.js'
 
 function Todos() {
-  const selectedProject = "next 7 days"
+  const selectedProject = "today"
 
   const todos = [
     {
@@ -12,8 +12,8 @@ function Todos() {
       time : "10:00 AM",
       date : "06/03/2024",
       day : "6",
-      checked : false,
-      color : "#000000",
+      checked : true,
+      color : "#00ff00",
       project : "personal",
     },
     {
@@ -22,7 +22,7 @@ function Todos() {
       time : "09:00 AM",
       date : "08/03/2024",
       day : "1",
-      checked : true,
+      checked : false,
       color : "#00ff00",
       project : "work",
     },
@@ -39,7 +39,7 @@ function Todos() {
         <Next7Days todos={todos} />
         :
         todos.map( todo =>
-          <Todo todo={todo} key={todo.key} />
+          <Todo todo={todo} key={todo.id} />
         )
       }
       </div>
